@@ -136,4 +136,27 @@ export class Usuario {
             return false;
         }
     }
+    static async buscarPorId(idUsuario: number): Promise<any | null> {
+
+        try {
+
+            const queryBuscarPorId = `SELECT id_usuario, nome, tipo_usuario, contato
+            FROM usuario WHERE id_usuario = $1;`;
+
+            const { rows } = await database.query(queryBuscarPorId, [idUsuario]);
+            if (rows.length === 0) return null;
+            const usuarioBD = rows[0];
+
+            return {
+                idUsuario: usuarioBD.id_usuario,
+                nome: usuarioBD.nome,
+                tipoUsuario: usuarioBD.tipo_usuario,
+                contato: usuarioBD.contato
+            };
+
+        } catch (error) {
+            console.error(`Erro ao buscar usuario por ID: ${error}`);
+            return null;
+        }
+    }
 }
