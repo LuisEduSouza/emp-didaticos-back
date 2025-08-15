@@ -8,7 +8,12 @@ const SERVER_ROUTES = {
    NOVO_EQUIPAMENTO: '/novo/equipamento',
    LISTAR_EQUIPAMENTO: '/listar/equipamentos',
    ATUALIZAR_EQUIPAMENTO: '/atualiza/equipamento/:idEquipamento',
-   REMOVER_EQUIPAMENTO: '/remove/equipamento/:idEquipamento'
+   REMOVER_EQUIPAMENTO: '/remove/equipamento/:idEquipamento',
+
+   NOVO_EMPRESTIMO: '/novo/emprestimo',
+   LISTAR_EMPRESTIMO: '/listar/emprestimos',
+   LISTAR_EMPRESTIMOS_DETALHADO: '/listar/emprestimoDetalhado',
+   ATUALIZAR_EMPRESTIMO: '/atualiza/emprestimo/:idEmprestimo',
 }
 
 export{SERVER_ROUTES}

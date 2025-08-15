@@ -1,3 +1,4 @@
+
 import { Equipamento } from "../model/Equipamento.js";
 import type { Request, Response } from "express";
 
@@ -90,4 +91,4 @@ class EquipamentoController extends Equipamento {
     }
 }
 
-export default EquipamentoController;
+export default EquipamentoController; 
